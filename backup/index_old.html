@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GC</title>
+	<script src="http://localhost:3000/socket.io/socket.io.js"></script>
+</head>
+<body>
+	<script>
+  		var socket = io();
+
+      //recieving the status of the printer (P, F, etc)
+  		socket.on('status', function(data){
+  			if(data=="P"){
+          console.log("PRINTING!");
+        }
+        if(data=="F"){
+          console.log("FINISHED!");
+        }
+  		});
+
+      // socket.emit('cnc', {
+      //  "ip":"192.168.3.10", 
+      //  "name":"GC", 
+      //  "score": "89"
+      // });
+      socket.emit('cnc', "192.160.3.100 GC 8383");//This goes in your game when the user looses
+
+	</script>
+<h1>TEST</h1>
+</body>
+</html>
