@@ -130,18 +130,19 @@ io.on('connection', function(socket){
 
 	    		/*need to check the part belowwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww*/
     			if (PosCounter != 33){
-    				gcodeEnding = "G0 X" + newStart + " " + "Y0\n"// servo version
+    				gcodeEnding = "G0 X" + newStart + " " + "Y0\n"// servo version, in servo version, the pin of M(was spindle on off in stepper version)
     				// gcodeEnding = "M3 0\nG0 X" + newStart + " " + "Y0\n"
     				console.log('reach the end')
     			} else{
-    				gcodeEnding = "M3 0\nG0 X10 Y0\n"
+    				gcodeEnding = "G0 X0 Y0\n"
+    				//gcodeEnding = "M3 0\nG0 X10 Y0\n" // servo version
     				console.log('far from the end')
     			}
     /**/
 
 
 				for(var i=0; i<gcodeData.length; i++){
-				/*UNCOMMENT TO CHANGE THE VALUE OF Z*/
+				/*UNCOMMENT TO CHANGE THE VALUE OF Z*///this is comment for stepper version
 					var g = gcodeData[i].includes("G1");
 					var n = gcodeData[i].includes("Z");
     				var gStart = gcodeData[i].includes("G9")
