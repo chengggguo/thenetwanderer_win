@@ -26,10 +26,10 @@ $112=150.000 (z max rate, mm/min)
 $120=50.000 (x accel, mm/sec^2)
 $121=50.000 (y accel, mm/sec^2)
 $122=50.000 (z accel, mm/sec^2)
-$130=330.000 (x max travel, mm)
-$131=86.000 (y max travel, mm)
+$130=190.000 (x max travel, mm)
+$131=75.000 (y max travel, mm)
 $132=5.000 (z max travel, mm)
 $X(kill alarm lock)
 $H
-G0 X-315 Y0
+G0 X5 Y75
 $21 = 0
