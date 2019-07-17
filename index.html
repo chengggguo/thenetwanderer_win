@@ -37,7 +37,13 @@
             <li>Checking the connection</li>
             <li>Checking the proxy and the firewall</li>
         </ul>
-        <p style="font-size: 6px;font-weight:400;">ERR_CONNECTION_REFUSED</p>
+        <script> //get the error type from browser url and print at the last line
+            var errorUrl = window.location.search;
+            errorSplit = errorUrl.split("=")
+            errorType = "ERR_CONNECTION_" + errorSplit[1]
+            document.write('<p style="font-size: 6px;font-weight:400;">' + errorType + '</p>');
+ 
+        </script>
     </div>
 
 
@@ -106,6 +112,18 @@ function getDataForm(){
     //console.log(distanceMeter.getActualDistance(Math.ceil(distanceRan)))
 } 
 
+function getRequest() {
+    var url = location.search; //获取url中"?"符后的字串
+    var theRequest = new Object();
+    if (url.indexOf("?") != -1) {
+        var str = url.substr(1);
+        strs = str.split("&");
+        for(var i = 0; i < strs.length; i ++) {
+            theRequest[strs[i].split("=")[0]]=unescape(strs[i].split("=")[1]);
+        }
+    }
+    return theRequest;
+}
 
 </script>
     
