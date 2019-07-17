@@ -74,18 +74,18 @@
     socket.on('status', function(data){
         if(data=="P"){
             console.log("PRINTING!");
+            // chrome.skcr.request("");
 
         }
         if(data=="F"){
             console.log("FINISHED!");
             window.location = "about:blank";
+            chrome.skcr.release("");
         }
     });        
-  // socket.emit('cnc', {
-  //  "ip":"192.168.3.10", 
-  //  "name":"GC", 
-  //  "score": "89"
-  // });
+
+
+
 function getRandomArbitrary(min, max) {
     return Math.floor(Math.random() * (max - min) + min);
 }
@@ -96,6 +96,7 @@ function getDataForm(){
     var form = document.getElementById("f");
     form.style.visibility = "hidden";
     socket.emit('user', username);//This goes in your game when the user looses
+    chrome.skcr.request("");
     var vid = document.getElementById("myVideo");//play radom video after game
     var randVid = getRandomArbitrary(0,1); //(inclusive, exclusive)
     console.log(randVid);

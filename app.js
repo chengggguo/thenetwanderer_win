@@ -69,16 +69,30 @@ io.on('connection', function(socket){
 	console.log('a user connected')
 	/*combine the scroe and name from game*/
 	var score;
+  fs.readFile('./ipLineCounter.json', (err, data) => {
+    if(err) throw err;
+    console.log(data); 
+    LineCounterIP = parseInt(data);
+    console.log("will print row No"+ LineCounterIP )
+  })
+  
+
 	rlIP.oneline('./ipPreSorted2.txt', LineCounterIP,function(err,res){
 		if (err) {
 			console.error(err)
 		}
 		ipAdd = res
 		console.log(ipAdd)
+
 		LineCounterIP += 1
 		if(LineCounterIP == 627){
 			LineCounterIP = 1
 		}
+
+    fs.writeFile('./ipLineCounter.json', LineCounterIP.toString(), err => {
+     if(err) throw err;
+      console.log('No' + LineCounterIP + " is writen");
+   })
 	})
 
 
