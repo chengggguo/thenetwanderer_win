@@ -15,9 +15,10 @@
 </head>
 
 <body id="t" class="offline">
+
     <form id="f">
         Please enter your name:<br>
-        <input type="text" id="input_id" value="" maxlength="12" style="width:125px; padding:5px 5px; border: 0.8px solid #666; font-size: 7px;color:#666; font-family: sans, Arial, sans-serif; font-weight: 700;">
+        <input type="text" id="input_id" value="" maxlength="10" style="width:125px; padding:5px 5px; border: 0.8px solid #666; font-size: 7px;color:#666; font-family: sans, Arial, sans-serif; font-weight: 700;">
         <input type="button" value="Submit" onclick="getDataForm()" style="padding:5px 5px; border:0.8px solid #666; font-size: 7px;color:#666;font-family: sans, Arial, sans-serif; font-weight: 700;">
     </form>
     <video id="myVideo" controls style="width:640px;height:360px;">
@@ -112,18 +113,6 @@ function getDataForm(){
     //console.log(distanceMeter.getActualDistance(Math.ceil(distanceRan)))
 } 
 
-function getRequest() {
-    var url = location.search; //获取url中"?"符后的字串
-    var theRequest = new Object();
-    if (url.indexOf("?") != -1) {
-        var str = url.substr(1);
-        strs = str.split("&");
-        for(var i = 0; i < strs.length; i ++) {
-            theRequest[strs[i].split("=")[0]]=unescape(strs[i].split("=")[1]);
-        }
-    }
-    return theRequest;
-}
 
 </script>
     
