@@ -18,7 +18,7 @@
 
     <form id="f">
         Please enter your name:<br>
-        <input type="text" id="input_id" value="" maxlength="10" style="width:125px; padding:5px 5px; border: 0.8px solid #666; font-size: 7px;color:#666; font-family: sans, Arial, sans-serif; font-weight: 700;">
+        <input type="text" id="input_id" value="" maxlength="10"  onkeyup="value=value.replace(/[\W]/g,'') " onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))" style="width:125px padding:5px 5px; border: 0.8px solid #666; font-size: 7px;color:#666; font-family: sans, Arial, sans-serif; font-weight: 700;">
         <input type="button" value="Submit" onclick="getDataForm()" style="padding:5px 5px; border:0.8px solid #666; font-size: 7px;color:#666;font-family: sans, Arial, sans-serif; font-weight: 700;">
     </form>
     <video id="myVideo" controls style="width:640px;height:360px;">

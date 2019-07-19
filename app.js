@@ -135,7 +135,7 @@ io.on('connection', function(socket){
     			var gcodeEnding = " "
 
 	    		/*need to check the part belowwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww*/
-    			if (PosCounter <= 30){
+    			if (PosCounter <= 32){
     				gcodeEnding = "G0 X" + newStart + " " + "Y0\n"// servo version
     				// gcodeEnding = "M3 0\nG0 X" + newStart + " " + "Y0\n"
     				console.log('reach the end')

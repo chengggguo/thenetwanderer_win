@@ -31,5 +31,5 @@ $131=75.000 (y max travel, mm)
 $132=5.000 (z max travel, mm)
 $X(kill alarm lock)
 $H
-G0 X5 Y75
+G0 X10 Y75
 $21 = 0
