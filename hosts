@@ -1,0 +1,146 @@
+# Copyright (c) 1993-2009 Microsoft Corp.
+#
+# This is a sample HOSTS file used by Microsoft TCP/IP for Windows.
+#
+# This file contains the mappings of IP addresses to host names. Each
+# entry should be kept on an individual line. The IP address should
+# be placed in the first column followed by the corresponding host name.
+# The IP address and the host name should be separated by at least one
+# space.
+#
+# Additionally, comments (such as these) may be inserted on individual
+# lines or following the machine name denoted by a '#' symbol.
+#
+# For example:
+#
+#      102.54.94.97     rhino.acme.com          # source server
+#       38.25.63.10     x.acme.com              # x client host
+
+# localhost name resolution is handled within DNS itself.
+#	127.0.0.1       localhost
+#	::1             localhost
+
+127.0.0.1 mail.google.com
+127.0.0.1 google.com
+127.0.0.1 maps.google.com
+127.0.0.1 docs.google.com
+127.0.0.1 *.googleapis.com
+127.0.0.1 plus.google.com
+127.0.0.1 sites.google.com
+127.0.0.1 www.facebook.com
+127.0.0.1 www.youtube.com
+127.0.0.1 twitter.com
+127.0.0.1 blogspot.com
+127.0.0.1 t.co
+127.0.0.1 google.co.jp
+127.0.0.1 instagram.com
+127.0.0.1 www.xvideos.com
+127.0.0.1 www.fc2.com
+127.0.0.1 www.xhamster.com
+127.0.0.1 pinterest.com
+127.0.0.1 www.pornhub.com
+127.0.0.1 thepiratebay.se
+127.0.0.1 dailymotion.com
+127.0.0.1 nytimes.com
+127.0.0.1 www.dropbox.com
+127.0.0.1 www.vimeo.com
+127.0.0.1 www.soundcloud.com
+127.0.0.1 www.archive.org
+127.0.0.1 scribd.com
+127.0.0.1 isohunt.com
+127.0.0.1 www.xing.com
+127.0.0.1 www.hardsextube.com
+127.0.0.1 www.drtuber.com
+127.0.0.1 bloomberg.com
+127.0.0.1 appspot.com
+127.0.0.1 yomiuri.co.jp
+127.0.0.1 www.ustream.tv
+127.0.0.1 jw.org
+127.0.0.1 lazygirls.info
+127.0.0.1 startpage.com
+127.0.0.1 www.plurk.com
+127.0.0.1 www.theepochtimes.com
+127.0.0.1 www.epochtimes.com
+127.0.0.1 boxun.com
+127.0.0.1 www.sbs.com.au/chinese
+127.0.0.1 lesoir.be
+127.0.0.1 www.ntdtv.com
+127.0.0.1 radio.garden
+127.0.0.1 wikileaks.org
+127.0.0.1 www.openvpn.net
+127.0.0.1 www.allmovie.com
+127.0.0.1 www.strongvpn.com
+127.0.0.1 amnesty.org
+127.0.0.1 www.radioaustralia.net.au/chinese
+127.0.0.1 www.rsf.org
+127.0.0.1 www.falundafa.org
+127.0.0.1 www.minghui.org
+127.0.0.1 www.livestation.com
+127.0.0.1 twister.net.co
+127.0.0.1 www.vpncoupons.com
+127.0.0.1 www.elephantvpn.com
+127.0.0.1 thetibetpost.com
+127.0.0.1 www.radiovncr.com
+127.0.0.1 waselpro.com
+127.0.0.1 www.tibet.net
+127.0.0.1 duckduckgo.com
+127.0.0.1 flickr.com
+127.0.0.1 bbc.co.uk
+127.0.0.1 bbc.com
+127.0.0.1 badoo.com
+127.0.0.1 periscope.tv
+127.0.0.1 tumblr.com
+127.0.0.1 thecim.org
+127.0.0.1 slideshare.net
+127.0.0.1 wsj.com
+127.0.0.1 mega.nz
+127.0.0.1 disqus.com
+127.0.0.1 reuters.com
+127.0.0.1 rfa.org
+127.0.0.1 economist.com
+127.0.0.1 time.com
+127.0.0.1 *.bigcommerce.com
+127.0.0.1 greatfire.org
+127.0.0.1 www.torproject.org
+127.0.0.1 www.whatsapp.com
+127.0.0.1 www.pixiv.net
+127.0.0.1 www.quozr.com
+127.0.0.1 www.getlantern.org
+127.0.0.1 discordapp.com
+127.0.0.1 www.hbo.com
+127.0.0.1 quora.com
+127.0.0.1 www.abc.net.au
+127.0.0.1 shadowsocks.org
+127.0.0.1 shadowsocks.se
+127.0.0.1 www.tapatalk.com 
+127.0.0.1 viber.com
+127.0.0.1 www.rfi.fr
+127.0.0.1 rferl.org
+127.0.0.1 akinator.com
+127.0.0.1 medium.com
+127.0.0.1 goodreads.com
+127.0.0.1 hrw.org
+127.0.0.1 worldcat.org
+127.0.0.1 scmp.com
+127.0.0.1 theinitium.com
+127.0.0.1 change.org
+127.0.0.1 jamestown.org
+127.0.0.1 www.wattpad.com
+127.0.0.1 imgur.com
+127.0.0.1 aljazeera.com
+127.0.0.1 www.citizenpowerforchina.org
+127.0.0.1 www.yibaochina.com
+127.0.0.1 www.ceraglobal.net
+127.0.0.1 streamable.com
+127.0.0.1 theguardian.com
+127.0.0.1 washingtonpost.com
+127.0.0.1 nbc.com
+127.0.0.1 huffpost.com
+127.0.0.1 straitstimes.com
+127.0.0.1 vocaroo.com
+127.0.0.1 zh.wikipedia.org
+127.0.0.1 dailymail.co.uk
+
+
+
+
