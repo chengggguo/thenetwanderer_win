@@ -69,14 +69,10 @@ io.on('connection', function(socket){
 	console.log('a user connected')
 	/*combine the scroe and name from game*/
 	var score;
-  fs.readFile('./ipLineCounter.json', (err, data) => {
-    if(err) throw err;
-    console.log(data); 
-    LineCounterIP = parseInt(data);
-    console.log("will print row No"+ LineCounterIP )
-  })
-  
 
+	LineCounterIP = getRandomInt(627)//print a random line of IP
+	console.log("get the random number" + LineCounterIP)
+ 	
 	rlIP.oneline('./ipPreSorted2.txt', LineCounterIP,function(err,res){
 		if (err) {
 			console.error(err)
@@ -84,15 +80,7 @@ io.on('connection', function(socket){
 		ipAdd = res
 		console.log(ipAdd)
 
-		LineCounterIP += 1
-		if(LineCounterIP == 627){
-			LineCounterIP = 1
-		}
 
-    fs.writeFile('./ipLineCounter.json', LineCounterIP.toString(), err => {
-     if(err) throw err;
-      console.log('No' + LineCounterIP + " is writen");
-   })
 	})
 
 
@@ -129,13 +117,13 @@ io.on('connection', function(socket){
     			var newStart = 5
     			var resetPos = 0 - newStart*(PosCounter-1)
     			// console.log('newStart' + newStart)
-	    		var gcodeString = "G1 F1500\nG21\nM05 G4 P0.1 S0\n"; // for servo version
+	    		var gcodeString = "G1 F1200\nG21\nM05 G4 P0.5 S0\n"; // for servo version 
 				// var gcodeString = "G1 F1500\nG21\nM3 S1000\n";
 				// var zVal = -1; // comment out on servo version
     			var gcodeEnding = " "
 
 	    		/*need to check the part belowwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww*/
-    			if (PosCounter <= 32){
+    			if (PosCounter <= 30){
     				gcodeEnding = "G0 X" + newStart + " " + "Y0\n"// servo version
     				// gcodeEnding = "M3 0\nG0 X" + newStart + " " + "Y0\n"
     				console.log('reach the end')
@@ -166,7 +154,7 @@ io.on('connection', function(socket){
        					//gcodeString += splitSubs[0] + "Z" + zVal + " " + "F150" +"\n";//(3 stepper versionset F to change the feed speed
     				}else if(g && d){
     					splitSubs = gcodeData[i].split("G");
-    					gcodeString += splitSubs[0] + "M03 G4 P0.1 S155" + "\n" // servo down
+    					gcodeString += splitSubs[0] + "M03 G4 P0.1 S156" + "\n" // servo down
 
 	    			}else if(f && u){
     					splitSubs = gcodeData[i].split("G");
@@ -242,6 +230,9 @@ function SerialState(){
   return serialState
 }
 
+function getRandomInt(max) {
+  return Math.floor(Math.random() * Math.floor(max));
+}
 
 /*gcode sender*/
 function GcodeSender(callback){
