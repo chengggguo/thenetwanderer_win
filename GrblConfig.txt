@@ -1,3 +1,4 @@
+$X
 $0=10 (step pulse, usec)
 $1=255 (step idle delay, msec)
 $2=0 (step port invert mask:00000000)
@@ -29,7 +30,7 @@ $122=50.000 (z accel, mm/sec^2)
 $130=190.000 (x max travel, mm)
 $131=80.000 (y max travel, mm)
 $132=5.000 (z max travel, mm)
-$X(kill alarm lock)
 $H
-G0 X10 Y80
+
+G0 X10 Y85
 $21 = 0

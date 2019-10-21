@@ -105,9 +105,9 @@ function getDataForm(){
     socket.emit('user', username);//This goes in your game when the user looses
     chrome.skcr.request("");
     var vid = document.getElementById("myVideo");//play radom video after game
-    var randVid = getRandomArbitrary(0,1); //(inclusive, exclusive)
+    var randVid = getRandomArbitrary(0,22); //(inclusive, exclusive)
     console.log(randVid);
-    vid.setAttribute("src", "assets/footage/"+randVid+".webm");
+    vid.setAttribute("src", "assets/footage/"+randVid+".MP4");
     vid.style.visibility = "visible";
     vid.play();
     //console.log(distanceMeter.getActualDistance(Math.ceil(distanceRan)))

@@ -123,7 +123,7 @@ io.on('connection', function(socket){
     			var gcodeEnding = " "
 
 	    		/*need to check the part belowwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww*/
-    			if (PosCounter <= 30){
+    			if (PosCounter <= 29){
     				gcodeEnding = "G0 X" + newStart + " " + "Y0\n"// servo version
     				// gcodeEnding = "M3 0\nG0 X" + newStart + " " + "Y0\n"
     				console.log('reach the end')
@@ -154,7 +154,7 @@ io.on('connection', function(socket){
        					//gcodeString += splitSubs[0] + "Z" + zVal + " " + "F150" +"\n";//(3 stepper versionset F to change the feed speed
     				}else if(g && d){
     					splitSubs = gcodeData[i].split("G");
-    					gcodeString += splitSubs[0] + "M03 G4 P0.1 S156" + "\n" // servo down
+    					gcodeString += splitSubs[0] + "M03 G4 P0.1 S100" + "\n" // servo down
 
 	    			}else if(f && u){
     					splitSubs = gcodeData[i].split("G");
