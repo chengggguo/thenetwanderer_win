@@ -127,7 +127,7 @@ function getRandmonText(){
 			console.log(ipAdd)
 		})
 		setTimeout(function(){
-			randomNameNo = getRandomInt(4940)
+			randomNameNo = getRandomInt(3110)
 			rlName.oneline('./names.txt', LineCounterIP,function(err,res){
 				if (err) {
 					console.error(err)
