@@ -107,7 +107,7 @@ function setDelay(i,calback){
 		// getRandmonText()
 		console.log(i)
 		console.log("send the gcode " + i + " round")
-	},i*360000)			//modify the holding time of which line
+	},i*400000)			//modify the holding time of which line
 	return('finish')
 }
 
@@ -142,7 +142,7 @@ function getRandmonText(){
 				score = score.toString()
 				console.log('got random name and score')
 				totalData =  ipAdd + " " + name + " " + score;
-				//totalData =  "." //for testing
+				//totalData =  "192.232.123.678 asdfghj 1999" //for testing
 				console.log("the machine will print" + totalData)
 
 				console.log("text to SVG")
