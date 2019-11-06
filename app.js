@@ -24,7 +24,7 @@ var ipAdd = ' '
 
 /*arduino serail port(gbrl)*/
 const SerialPort = require('serialport')
-const portCNC = new SerialPort('/COM3', { baudRate: 115200 })
+const portCNC = new SerialPort('/COM6', { baudRate: 115200 })
 const portSpindle = new SerialPort('/COM4',{ baudRate: 9600})
 var Readline = SerialPort.parsers.Readline
 

@@ -29,7 +29,7 @@ var name = ' '
 var totalData = "33"
 /*arduino serail port(gbrl)*/
 const SerialPort = require('serialport')
-const portCNC = new SerialPort('/COM3', { baudRate: 115200 })
+const portCNC = new SerialPort('/COM6', { baudRate: 115200 })
 const portSpindle = new SerialPort('/COM4',{ baudRate: 9600})
 var Readline = SerialPort.parsers.Readline
 
@@ -44,7 +44,7 @@ portSpindle.pipe(parserSpindle)
 var Fiber = require('fibers')
 
 //limit counter for engraving test
-var PosLimit = 32
+var PosLimit = 40
 
 var path
 
@@ -107,7 +107,7 @@ function setDelay(i,calback){
 		// getRandmonText()
 		console.log(i)
 		console.log("send the gcode " + i + " round")
-	},i*350000)
+	},i*360000)			//modify the holding time of which line
 	return('finish')
 }
 
@@ -138,11 +138,11 @@ function getRandmonText(){
 				console.log(name)
 			})
 			setTimeout(function(){
-				var score = getRandomInt(9999) // get a random scroe for testing
+				var score = getRandomInt(2700) // get a random scroe for testing
 				score = score.toString()
 				console.log('got random name and score')
 				totalData =  ipAdd + " " + name + " " + score;
-				// totalData =  ipAdd + " " + " " + score;
+				//totalData =  "." //for testing
 				console.log("the machine will print" + totalData)
 
 				console.log("text to SVG")
