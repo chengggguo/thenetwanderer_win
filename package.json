@@ -16,7 +16,7 @@
     "line-by-line": "^0.1.6",
     "readline-specific": "^1.0.4",
     "serialport": "^7.1.5",
-    "socket.io": "^2.2.0",
+    "socket.io": "^2.4.0",
     "svgcode": "^1.0.1",
     "svgpath": "^2.2.1",
     "text-to-svg": "^3.1.5",
