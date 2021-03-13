@@ -20,6 +20,6 @@
     "svgcode": "^1.0.1",
     "svgpath": "^2.2.1",
     "text-to-svg": "^3.1.5",
-    "xmldom": "^0.1.27"
+    "xmldom": "^0.5.0"
   }
 }
